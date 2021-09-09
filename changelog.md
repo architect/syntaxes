@@ -1,10 +1,10 @@
-# Architect syntax highlighter / grammar
+# Architect syntax definitions
 
 ---
 
 ## [1.0.0] 2021-09-06
 
-This grammar was extracted from [@ryanblock/architect-vscode-grammar-extension](https://github.com/ryanblock/architect-vscode-grammar-extension), which has been chugging along for almost exactly two years.
+This syntax definition was extracted from [@ryanblock/architect-vscode-grammar-extension](https://github.com/ryanblock/architect-vscode-grammar-extension), which has been chugging along for almost exactly two years.
 
 We've finally brought it home to @architect, given it a full rewrite, fixed a bunch of bugs, and prepared for release to some new places!
 

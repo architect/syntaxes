@@ -1,9 +1,9 @@
 <p align=center><img src="https://s3-us-west-2.amazonaws.com/arc.codes/architect-logo-500b@2x.png" width=500></p>
 
-> Grammars for syntax highlighter extensions and other tools that display the Architect file format
+> Syntax definitions for highlighter extensions and other tools that display the Architect file format
 
 
-## Build the grammars
+## Build the syntax definitions
 
 ```bash
 npm run build
@@ -19,7 +19,9 @@ npm run build
 
 ---
 
-### Resources for building TextMate grammars
+### Resources
+
+#### Building TextMate grammars
 
 - [The TextMate spec](https://macromates.com/manual/en/language_grammars)
 - [Guide to writing a language grammar (TextMate) in Atom, by @Aerijo](https://gist.github.com/Aerijo/b8c82d647db783187804e86fa0a604a1)

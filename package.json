@@ -1,20 +1,19 @@
 {
-  "name": "@architect/grammars",
+  "name": "@architect/syntaxes",
   "version": "0.0.1",
-  "displayName": "Architect format grammars",
-  "description": "Grammars for syntax highlighter extensions and other tools that display the Architect file format",
+  "description": "Syntax definitions for highlighter extensions and other tools that display the Architect file format",
   "author": "Ryan Block <hello@ryanblock.com>",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/architect/grammars.git"
+    "url": "https://github.com/architect/syntaxes.git"
   },
   "bugs": {
-    "url": "https://github.com/architect/grammars/issues"
+    "url": "https://github.com/architect/syntaxes/issues"
   },
   "homepage": "https://arc.codes",
   "scripts": {
-    "build": "node src/build-grammars"
+    "build": "node src/build-syntaxes"
   },
   "devDependencies": {
     "@architect/eslint-config": "^2.0.0",

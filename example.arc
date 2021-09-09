@@ -86,6 +86,9 @@ hello # a comment
   "friend#@!" # comment
   'friend#@!' # comment
   `friend#@!` # comment
+  true # a comment
+  123 # a comment
+  123.45 # a comment
 hi
   there
   friends
@@ -103,4 +106,4 @@ hello # a comment
 hi
   there true 1 friend
   neighbors and
-  wonderful "humans@#"
+  wonderful "humans@#" 123.45

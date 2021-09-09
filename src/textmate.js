@@ -12,7 +12,7 @@ let proceedingSpaceCommentOrEnd = posLookahead(anyWhitespace, or, '#', or, end)
 // Standard ascii charset sans quotes
 let asciiWithoutQuotes = ascii.filter(c => ![ '"', `'`, '`' ].includes(c))
 
-let grammar = {
+let syntax = {
   name: 'Architect',
   scopeName: 'source.arc',
   firstLineMatch: concat(start, '@', set(...asciiWithoutQuotes), oneOrMore),
@@ -203,4 +203,4 @@ let grammar = {
   }
 }
 
-module.exports = grammar
+module.exports = syntax
