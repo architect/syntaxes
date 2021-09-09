@@ -1,0 +1,38 @@
+{
+  "name": "@architect/grammars",
+  "version": "0.0.1",
+  "displayName": "Architect format grammars",
+  "description": "Grammars for syntax highlighter extensions and other tools that display the Architect file format",
+  "author": "Ryan Block <hello@ryanblock.com>",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/architect/grammars.git"
+  },
+  "bugs": {
+    "url": "https://github.com/architect/grammars/issues"
+  },
+  "homepage": "https://arc.codes",
+  "scripts": {
+    "build": "node src/build-grammars"
+  },
+  "devDependencies": {
+    "@architect/eslint-config": "^2.0.0",
+    "eslint": "^7.32.0"
+  },
+  "eslintConfig": {
+    "extends": "@architect/eslint-config"
+  },
+  "keywords": [
+    "aws",
+    "arc",
+    "architect",
+    "serverless",
+    "cloud",
+    "app.arc",
+    ".arc",
+    "prefs.arc",
+    "preferences.arc",
+    "config.arc"
+  ]
+}
