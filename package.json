@@ -13,11 +13,13 @@
   },
   "homepage": "https://arc.codes",
   "scripts": {
-    "build": "node src/build-syntaxes"
+    "build": "node src/build-syntaxes",
+    "lint": "eslint . --fix"
   },
   "devDependencies": {
     "@architect/eslint-config": "^2.0.0",
-    "eslint": "^7.32.0"
+    "eslint": "^7.32.0",
+    "plist": "^3.0.4"
   },
   "eslintConfig": {
     "extends": "@architect/eslint-config"
