@@ -28,7 +28,7 @@ let syntax = {
     // Pragmas
     {
       comment: 'pragmas',
-      name: 'entity.name.section.arc',
+      name: 'entity.name.function.arc',
       match: concat(start, '@', set(...asciiWithoutQuotes), oneOrMore),
     },
 
