@@ -6,8 +6,15 @@
 ## Build the syntax definitions
 
 ```bash
-npm run build
+npm i && npm run build
 ```
+
+This generates and writes versions to be consumed by Atom, Sublime Text, and VS Code:
+
+- [JSON format](arc-textmate.json) - Used by Atom + VS Code
+- [PLIST format](arc.tmLanguage) - Used by Sublime Text
+
+Should any additional variations need to be built, create them here and pull them in as dependencies of the text editor extension in question.
 
 
 ## Notes / caveats
@@ -15,7 +22,9 @@ npm run build
 - The TextMate + Oniguruma grammar system does not enable conditional patterns, or expressions that can change state by matching across multiple lines
   - This poses some unique challenges for the Architect format, which is quite minimal, and uses significant whitespace
 - Additionally, due to the way this system captures, liberal use of regex lookarounds is necessary to capture certain patterns in specific circumstances (e.g. inline arrays) without introducing weirdness or overlapping in capture groups
-
+- Atom makes use of TextMate Grammars in both `cson` and `json` formats, but its settings file must be a `cson` file in the `settings` dir (e.g. `settings/arc.cson`)
+- Sublime's language file must be `*.tmLanguage`, its settings must be `*.tmPreferences`, and both must be authored in `PLIST`
+- VS Code accepts TextMate in `json` (with another preferences `json` file pointed to by `package.json`)
 
 ---
 
