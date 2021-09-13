@@ -9,35 +9,36 @@
 @strings
 hello # a comment
 hello# a comment
+h'e`l"l'o t`h"e'r`e # a comment
 "hello
 # there
 friend!" # a comment
 "hello there friend!" # a comment
-"hello there friend!"#comment
+"hello there "friend!"#comment
 "hello there \"friend!" # a comment
 "hello there \"friend!"#comment
-"hello there #@friend!" # a comment
-"hello there #@friend!"#comment
+"hello there #@'`friend!" # a comment
+"hello there #@'`friend!"#comment
 
 'hello
 # there
 friend!' # a comment
 'hello there friend!' # a comment
-'hello there friend!'#comment
+'hello there 'friend!'#comment
 'hello there \'friend!' # a comment
 'hello there \'friend!'#comment
-'hello there #@friend!' # a comment
-'hello there #@friend!'#comment
+'hello there #@`"friend!' # a comment
+'hello there #@`"friend!'#comment
 
 `hello
 # here
 friend!` # a comment
 `hello there friend!` # a comment
-`hello there friend!`# a comment
+`hello there `friend!`# a comment
 `hello there \`friend!` # a comment
 `hello there \`friend!`#comment
-`hello there #@friend!` # a comment
-`hello there #@friend!`#comment
+`hello there #@'"friend!` # a comment
+`hello there #@'"friend!`#comment
 
 123.45.6
 a123.45b

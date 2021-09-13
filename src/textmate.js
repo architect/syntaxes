@@ -125,7 +125,10 @@ let syntax = {
               name: 'string.quoted.double.arc'
             }
           },
-          end: group('"'),
+          end: concat(
+            group('"'),
+            proceedingSpaceCommentOrEnd,
+          ),
           endCaptures: {
             '0': {
               name: 'string.quoted.double.arc'
@@ -135,7 +138,11 @@ let syntax = {
             {
               name: 'string.quoted.double.arc',
               match: group(lit`\\"`)
-            }
+            },
+            {
+              name: 'invalid.illegal.arc',
+              match: '"'
+            },
           ]
         },
 
@@ -149,7 +156,10 @@ let syntax = {
               name: 'string.quoted.single.arc'
             }
           },
-          end: group("'"),
+          end: concat(
+            group("'"),
+            proceedingSpaceCommentOrEnd,
+          ),
           endCaptures: {
             '0': {
               name: 'string.quoted.single.arc'
@@ -159,7 +169,11 @@ let syntax = {
             {
               name: 'string.quoted.single.arc',
               match: group(lit`\\'`)
-            }
+            },
+            {
+              name: 'invalid.illegal.arc',
+              match: "'"
+            },
           ]
         },
 
@@ -173,7 +187,10 @@ let syntax = {
               name: 'string.quoted.backtick.arc'
             }
           },
-          end: group('`'),
+          end: concat(
+            group('`'),
+            proceedingSpaceCommentOrEnd,
+          ),
           endCaptures: {
             '0': {
               name: 'string.quoted.backtick.arc'
@@ -183,7 +200,11 @@ let syntax = {
             {
               name: 'string.quoted.backtick.arc',
               match: group(lit`\\\``)
-            }
+            },
+            {
+              name: 'invalid.illegal.arc',
+              match: '`'
+            },
           ]
         },
 
@@ -193,7 +214,7 @@ let syntax = {
           match: concat(
             precedingSpaceStartOrCapture,
             group(
-              set(...asciiWithoutQuotes), oneOrMore
+              set(...ascii), oneOrMore
             ),
             proceedingSpaceCommentOrEnd
           )
