@@ -2,6 +2,19 @@
 
 ---
 
+## [1.0.1] 2021-09-12
+
+### Added
+
+- Added invalid character flags when unescaped quotes are found inside a quoted string
+
+
+### Fixed
+
+- Fixed scalar strings that included quotes (e.g. `h'e'l'l'o`)
+
+---
+
 ## [1.0.0] 2021-09-06
 
 This syntax definition was extracted from [@ryanblock/architect-vscode-grammar-extension](https://github.com/ryanblock/architect-vscode-grammar-extension), which has been chugging along for almost exactly two years.
