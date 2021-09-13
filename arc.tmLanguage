@@ -36,9 +36,9 @@
       </dict>
       <dict>
         <key>comment</key>
-        <string>map properties (only); map (and vector) names cannot be detected</string>
+        <string>map properties &amp; implied vector values; map / vector names cannot be detected</string>
         <key>begin</key>
-        <string>(^[\t ]{2})(?!#)(\S+)(?!\s*#)(?=([\t ]\S+))</string>
+        <string>(^[\t ]{2})(?!#)([^#\s]+)(?!\s*#)(?=(([\t ]+)\S+))</string>
         <key>beginCaptures</key>
         <dict>
           <key>0</key>

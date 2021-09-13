@@ -21,8 +21,8 @@
       "match": "^@[a-zA-Z0-9!$%^&*(){}\\[\\]<>\\-_\\+=\\|\\\\:;,\\.\\?/~]+"
     },
     {
-      "comment": "map properties (only); map (and vector) names cannot be detected",
-      "begin": "(^[\\t ]{2})(?!#)(\\S+)(?!\\s*#)(?=([\\t ]\\S+))",
+      "comment": "map properties & implied vector values; map / vector names cannot be detected",
+      "begin": "(^[\\t ]{2})(?!#)([^#\\s]+)(?!\\s*#)(?=(([\\t ]+)\\S+))",
       "beginCaptures": {
         "0": {
           "name": "variable.other.arc"
