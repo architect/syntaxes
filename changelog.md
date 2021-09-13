@@ -12,6 +12,9 @@
 ### Fixed
 
 - Fixed scalar strings that included quotes (e.g. `h'e'l'l'o`)
+- Fixed issue where vectors can't have spaces immediately following value (e.g. `vectorName\n  hi# comment`)
+- Fixed issue where maps don't detect comments if a `#` is within a property
+- Fixed issue where map values were only properly detected by a single space following the property, even though many are allowed
 
 ---
 

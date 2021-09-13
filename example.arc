@@ -81,15 +81,14 @@ false hello
 
 @vectors
 hello # a comment
-  # a comment
   there # a comment
-  there # comment
-  "friend#@!" # comment
-  'friend#@!' # comment
-  `friend#@!` # comment
+  there# a comment
+  "friend#@!" # a comment
+  'friend#@!' # a comment
+  `friend#@!` # a comment
   true # a comment
   123 # a comment
-  123.45 # a comment
+  123.45# a comment
 hi
   there
   friends
@@ -97,14 +96,15 @@ hi
 @maps
 hello # a comment
   # a comment
-  there true friends # a comment
-  there true friends# a comment
-  neighbors and # ok
+  there  true friends # a comment
+  there  true friends# a comment
+  true and # ok
   neighbors and# ok
-  wonderful "humans@#" # a comment
-  wonderful "humans@#"# a comment
+  wonderful "humans"@#" # a comment
+  wonderful "humans\"@#"# a comment
 
 hi
   there true 1 friend
   neighbors and
-  wonderful "humans@#" 123.45
+  wonderful "humans"@#" 123.45
+  wonderful "humans\"@#" 123.45

@@ -32,12 +32,17 @@ let syntax = {
       match: concat(start, '@', set(...asciiWithoutQuotes), oneOrMore),
     },
 
-    // Arrays are handled inline by individual string captures, so do not need a pattern. Yay!
+    /**
+     * Arrays are handled inline by individual string captures, so do not need a pattern. Yay!
+     */
 
     // Map (aka object) properties
-    // Note: these are handled recursively once detected (two spaces / tabs + multiple words)
+    // - This is a bit funky, but because TM grammar rules fall through…
+    // - So let's assume we find a new line with two spaces/tabs (aka a map prop or vector item)
+    //   - To detect vector items, we just need to reliably match map properties (e.g. a word followed by non-comments) – the rest just falls through!
+    //   - And if we find a map property, its values will be handled recursively with $self
     {
-      comment: 'map properties (only); map (and vector) names cannot be detected',
+      comment: 'map properties & implied vector values; map / vector names cannot be detected',
       begin: concat(
         // Anchor on new lines starting with two spaces / tabs
         group(
@@ -46,13 +51,15 @@ let syntax = {
         ),
         // But it cannot start with comment
         negLookahead('#'),
-        // Must then be followed by >0 real characters
-        group(anyNonWhitespace, oneOrMore),
-        // Cannot be followed by a comment (or that would make it a vector item, not a map property)
+        // Must then be followed by >0 chars; capture until finding a # or space char
+        // - Hitting a # makes this a vector value, so don't match and fall through
+        // - Hitting a space makes this a map property, keep on checking
+        group(set(`^#${lit`s`}`), oneOrMore),
+        // Map props cannot be followed by a comment (or they'd be vector items)
         negLookahead(anyWhitespace, zeroOrMore, '#'),
-        // Must then be followed by a space, preceding >0 real characters
+        // Ok, so now we've found a whole word; so look for some spaces preceding real chars
         posLookahead(group(
-          set(tab, space),
+          group(set(tab, space), oneOrMore),
           anyNonWhitespace, oneOrMore
         ))
       ),
