@@ -5,6 +5,7 @@ let concat = (...items) => items.join('')
 
 // Create regex sets
 let set = (...items) => `[${concat(...items)}]`
+let negSet = (...items) => `[^${concat(...items)}]`
 
 // Create capture groups
 let group = (...items) => `(${concat(...items)})`
@@ -50,6 +51,7 @@ let re = {
   // Utils
   concat,
   set,
+  negSet,
   group,
   lit: l,
 }
