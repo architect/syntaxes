@@ -1,0 +1,528 @@
+>@pragmas # a comment
+#^^^^^^^^ source.arc entity.name.function.arc
+#        ^ source.arc
+#         ^^^^^^^^^^^ source.arc comment.line.arc
+>@pragmas# a comment
+#^^^^^^^^ source.arc entity.name.function.arc
+#        ^^^^^^^^^^^ source.arc comment.line.arc
+>
+># comments
+#^^^^^^^^^^ source.arc comment.line.arc
+>#
+#^ source.arc comment.line.arc
+># a comment # moar commenting
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.arc comment.line.arc
+>  # a comment
+#^^ source.arc
+#  ^^^^^^^^^^^ source.arc comment.line.arc
+>
+>@strings
+#^^^^^^^^ source.arc entity.name.function.arc
+>hello # a comment
+#^^^^^ source.arc string.unquoted.arc
+#     ^ source.arc
+#      ^^^^^^^^^^^ source.arc comment.line.arc
+>hello# a comment
+#^^^^^ source.arc string.unquoted.arc
+#     ^^^^^^^^^^^ source.arc comment.line.arc
+>h'e`l"l'o t`h"e'r`e # a comment
+#^^^^^^^^^ source.arc string.unquoted.arc
+#         ^ source.arc
+#          ^^^^^^^^^ source.arc string.unquoted.arc
+#                   ^ source.arc
+#                    ^^^^^^^^^^^ source.arc comment.line.arc
+>"hello
+#^ source.arc string.quoted.double.arc string.quoted.double.arc
+# ^^^^^^ source.arc string.quoted.double.arc
+># there
+#^^^^^^^^ source.arc string.quoted.double.arc
+>friend!" # a comment
+#^^^^^^^ source.arc string.quoted.double.arc
+#       ^ source.arc string.quoted.double.arc string.quoted.double.arc
+#        ^ source.arc
+#         ^^^^^^^^^^^ source.arc comment.line.arc
+>"hello there friend!" # a comment
+#^ source.arc string.quoted.double.arc string.quoted.double.arc
+# ^^^^^^^^^^^^^^^^^^^ source.arc string.quoted.double.arc
+#                    ^ source.arc string.quoted.double.arc string.quoted.double.arc
+#                     ^ source.arc
+#                      ^^^^^^^^^^^ source.arc comment.line.arc
+>"hello there "friend!"#comment
+#^ source.arc string.quoted.double.arc string.quoted.double.arc
+# ^^^^^^^^^^^^ source.arc string.quoted.double.arc
+#             ^ source.arc string.quoted.double.arc invalid.illegal.arc
+#              ^^^^^^^ source.arc string.quoted.double.arc
+#                     ^ source.arc string.quoted.double.arc string.quoted.double.arc
+#                      ^^^^^^^^ source.arc comment.line.arc
+>"hello there \"friend!" # a comment
+#^ source.arc string.quoted.double.arc string.quoted.double.arc
+# ^^^^^^^^^^^^ source.arc string.quoted.double.arc
+#             ^^ source.arc string.quoted.double.arc string.quoted.double.arc
+#               ^^^^^^^ source.arc string.quoted.double.arc
+#                      ^ source.arc string.quoted.double.arc string.quoted.double.arc
+#                       ^ source.arc
+#                        ^^^^^^^^^^^ source.arc comment.line.arc
+>"hello there \"friend!"#comment
+#^ source.arc string.quoted.double.arc string.quoted.double.arc
+# ^^^^^^^^^^^^ source.arc string.quoted.double.arc
+#             ^^ source.arc string.quoted.double.arc string.quoted.double.arc
+#               ^^^^^^^ source.arc string.quoted.double.arc
+#                      ^ source.arc string.quoted.double.arc string.quoted.double.arc
+#                       ^^^^^^^^ source.arc comment.line.arc
+>"hello there #@'`friend!" # a comment
+#^ source.arc string.quoted.double.arc string.quoted.double.arc
+# ^^^^^^^^^^^^^^^^^^^^^^^ source.arc string.quoted.double.arc
+#                        ^ source.arc string.quoted.double.arc string.quoted.double.arc
+#                         ^ source.arc
+#                          ^^^^^^^^^^^ source.arc comment.line.arc
+>"hello there #@'`friend!"#comment
+#^ source.arc string.quoted.double.arc string.quoted.double.arc
+# ^^^^^^^^^^^^^^^^^^^^^^^ source.arc string.quoted.double.arc
+#                        ^ source.arc string.quoted.double.arc string.quoted.double.arc
+#                         ^^^^^^^^ source.arc comment.line.arc
+>
+>'hello
+#^ source.arc string.quoted.single.arc string.quoted.single.arc
+# ^^^^^^ source.arc string.quoted.single.arc
+># there
+#^^^^^^^^ source.arc string.quoted.single.arc
+>friend!' # a comment
+#^^^^^^^ source.arc string.quoted.single.arc
+#       ^ source.arc string.quoted.single.arc string.quoted.single.arc
+#        ^ source.arc
+#         ^^^^^^^^^^^ source.arc comment.line.arc
+>'hello there friend!' # a comment
+#^ source.arc string.quoted.single.arc string.quoted.single.arc
+# ^^^^^^^^^^^^^^^^^^^ source.arc string.quoted.single.arc
+#                    ^ source.arc string.quoted.single.arc string.quoted.single.arc
+#                     ^ source.arc
+#                      ^^^^^^^^^^^ source.arc comment.line.arc
+>'hello there 'friend!'#comment
+#^ source.arc string.quoted.single.arc string.quoted.single.arc
+# ^^^^^^^^^^^^ source.arc string.quoted.single.arc
+#             ^ source.arc string.quoted.single.arc invalid.illegal.arc
+#              ^^^^^^^ source.arc string.quoted.single.arc
+#                     ^ source.arc string.quoted.single.arc string.quoted.single.arc
+#                      ^^^^^^^^ source.arc comment.line.arc
+>'hello there \'friend!' # a comment
+#^ source.arc string.quoted.single.arc string.quoted.single.arc
+# ^^^^^^^^^^^^ source.arc string.quoted.single.arc
+#             ^^ source.arc string.quoted.single.arc string.quoted.single.arc
+#               ^^^^^^^ source.arc string.quoted.single.arc
+#                      ^ source.arc string.quoted.single.arc string.quoted.single.arc
+#                       ^ source.arc
+#                        ^^^^^^^^^^^ source.arc comment.line.arc
+>'hello there \'friend!'#comment
+#^ source.arc string.quoted.single.arc string.quoted.single.arc
+# ^^^^^^^^^^^^ source.arc string.quoted.single.arc
+#             ^^ source.arc string.quoted.single.arc string.quoted.single.arc
+#               ^^^^^^^ source.arc string.quoted.single.arc
+#                      ^ source.arc string.quoted.single.arc string.quoted.single.arc
+#                       ^^^^^^^^ source.arc comment.line.arc
+>'hello there #@`"friend!' # a comment
+#^ source.arc string.quoted.single.arc string.quoted.single.arc
+# ^^^^^^^^^^^^^^^^^^^^^^^ source.arc string.quoted.single.arc
+#                        ^ source.arc string.quoted.single.arc string.quoted.single.arc
+#                         ^ source.arc
+#                          ^^^^^^^^^^^ source.arc comment.line.arc
+>'hello there #@`"friend!'#comment
+#^ source.arc string.quoted.single.arc string.quoted.single.arc
+# ^^^^^^^^^^^^^^^^^^^^^^^ source.arc string.quoted.single.arc
+#                        ^ source.arc string.quoted.single.arc string.quoted.single.arc
+#                         ^^^^^^^^ source.arc comment.line.arc
+>
+>`hello
+#^ source.arc string.quoted.backtick.arc string.quoted.backtick.arc
+# ^^^^^^ source.arc string.quoted.backtick.arc
+># here
+#^^^^^^^ source.arc string.quoted.backtick.arc
+>friend!` # a comment
+#^^^^^^^ source.arc string.quoted.backtick.arc
+#       ^ source.arc string.quoted.backtick.arc string.quoted.backtick.arc
+#        ^ source.arc
+#         ^^^^^^^^^^^ source.arc comment.line.arc
+>`hello there friend!` # a comment
+#^ source.arc string.quoted.backtick.arc string.quoted.backtick.arc
+# ^^^^^^^^^^^^^^^^^^^ source.arc string.quoted.backtick.arc
+#                    ^ source.arc string.quoted.backtick.arc string.quoted.backtick.arc
+#                     ^ source.arc
+#                      ^^^^^^^^^^^ source.arc comment.line.arc
+>`hello there `friend!`# a comment
+#^ source.arc string.quoted.backtick.arc string.quoted.backtick.arc
+# ^^^^^^^^^^^^ source.arc string.quoted.backtick.arc
+#             ^ source.arc string.quoted.backtick.arc invalid.illegal.arc
+#              ^^^^^^^ source.arc string.quoted.backtick.arc
+#                     ^ source.arc string.quoted.backtick.arc string.quoted.backtick.arc
+#                      ^^^^^^^^^^^ source.arc comment.line.arc
+>`hello there \`friend!` # a comment
+#^ source.arc string.quoted.backtick.arc string.quoted.backtick.arc
+# ^^^^^^^^^^^^ source.arc string.quoted.backtick.arc
+#             ^^ source.arc string.quoted.backtick.arc string.quoted.backtick.arc
+#               ^^^^^^^ source.arc string.quoted.backtick.arc
+#                      ^ source.arc string.quoted.backtick.arc string.quoted.backtick.arc
+#                       ^ source.arc
+#                        ^^^^^^^^^^^ source.arc comment.line.arc
+>`hello there \`friend!`#comment
+#^ source.arc string.quoted.backtick.arc string.quoted.backtick.arc
+# ^^^^^^^^^^^^ source.arc string.quoted.backtick.arc
+#             ^^ source.arc string.quoted.backtick.arc string.quoted.backtick.arc
+#               ^^^^^^^ source.arc string.quoted.backtick.arc
+#                      ^ source.arc string.quoted.backtick.arc string.quoted.backtick.arc
+#                       ^^^^^^^^ source.arc comment.line.arc
+>`hello there #@'"friend!` # a comment
+#^ source.arc string.quoted.backtick.arc string.quoted.backtick.arc
+# ^^^^^^^^^^^^^^^^^^^^^^^ source.arc string.quoted.backtick.arc
+#                        ^ source.arc string.quoted.backtick.arc string.quoted.backtick.arc
+#                         ^ source.arc
+#                          ^^^^^^^^^^^ source.arc comment.line.arc
+>`hello there #@'"friend!`#comment
+#^ source.arc string.quoted.backtick.arc string.quoted.backtick.arc
+# ^^^^^^^^^^^^^^^^^^^^^^^ source.arc string.quoted.backtick.arc
+#                        ^ source.arc string.quoted.backtick.arc string.quoted.backtick.arc
+#                         ^^^^^^^^ source.arc comment.line.arc
+>
+>123.45.6
+#^^^^^^^^ source.arc string.unquoted.arc
+>a123.45b
+#^^^^^^^^ source.arc string.unquoted.arc
+>a123.45
+#^^^^^^^ source.arc string.unquoted.arc
+>123.45b
+#^^^^^^^ source.arc string.unquoted.arc
+>"12345"
+#^ source.arc string.quoted.double.arc string.quoted.double.arc
+# ^^^^^ source.arc string.quoted.double.arc
+#      ^ source.arc string.quoted.double.arc string.quoted.double.arc
+>"true"
+#^ source.arc string.quoted.double.arc string.quoted.double.arc
+# ^^^^ source.arc string.quoted.double.arc
+#     ^ source.arc string.quoted.double.arc string.quoted.double.arc
+>"false"
+#^ source.arc string.quoted.double.arc string.quoted.double.arc
+# ^^^^^ source.arc string.quoted.double.arc
+#      ^ source.arc string.quoted.double.arc string.quoted.double.arc
+>
+>@numbers
+#^^^^^^^^ source.arc entity.name.function.arc
+>12345
+#^^^^^ source.arc constant.numeric.decimal.arc
+>123.45
+#^^^^^^ source.arc constant.numeric.decimal.arc
+>12345.67890
+#^^^^^^^^^^^ source.arc constant.numeric.decimal.arc
+>
+>@constants
+#^^^^^^^^^^ source.arc entity.name.function.arc
+>true
+#^^^^ source.arc constant.language.boolean.true.arc
+>false
+#^^^^^ source.arc constant.language.boolean.false.arc
+>
+>@arrays
+#^^^^^^^ source.arc entity.name.function.arc
+>hello there # a comment
+#^^^^^ source.arc string.unquoted.arc
+#     ^ source.arc
+#      ^^^^^ source.arc string.unquoted.arc
+#           ^ source.arc
+#            ^^^^^^^^^^^ source.arc comment.line.arc
+>hello there# a comment
+#^^^^^ source.arc string.unquoted.arc
+#     ^ source.arc
+#      ^^^^^ source.arc string.unquoted.arc
+#           ^^^^^^^^^^^ source.arc comment.line.arc
+>hello there true friend 1 # a comment
+#^^^^^ source.arc string.unquoted.arc
+#     ^ source.arc
+#      ^^^^^ source.arc string.unquoted.arc
+#           ^ source.arc
+#            ^^^^ source.arc constant.language.boolean.true.arc
+#                ^ source.arc
+#                 ^^^^^^ source.arc string.unquoted.arc
+#                       ^ source.arc
+#                        ^ source.arc constant.numeric.decimal.arc
+#                         ^ source.arc
+#                          ^^^^^^^^^^^ source.arc comment.line.arc
+>hello there false friend 1#comment
+#^^^^^ source.arc string.unquoted.arc
+#     ^ source.arc
+#      ^^^^^ source.arc string.unquoted.arc
+#           ^ source.arc
+#            ^^^^^ source.arc constant.language.boolean.false.arc
+#                 ^ source.arc
+#                  ^^^^^^ source.arc string.unquoted.arc
+#                        ^ source.arc
+#                         ^ source.arc constant.numeric.decimal.arc
+#                          ^^^^^^^^ source.arc comment.line.arc
+>hello "there #@friend!" true # a comment
+#^^^^^ source.arc string.unquoted.arc
+#     ^ source.arc
+#      ^ source.arc string.quoted.double.arc string.quoted.double.arc
+#       ^^^^^^^^^^^^^^^ source.arc string.quoted.double.arc
+#                      ^ source.arc string.quoted.double.arc string.quoted.double.arc
+#                       ^ source.arc
+#                        ^^^^ source.arc constant.language.boolean.true.arc
+#                            ^ source.arc
+#                             ^^^^^^^^^^^ source.arc comment.line.arc
+>hello "there #@friend!" false#comment
+#^^^^^ source.arc string.unquoted.arc
+#     ^ source.arc
+#      ^ source.arc string.quoted.double.arc string.quoted.double.arc
+#       ^^^^^^^^^^^^^^^ source.arc string.quoted.double.arc
+#                      ^ source.arc string.quoted.double.arc string.quoted.double.arc
+#                       ^ source.arc
+#                        ^^^^^ source.arc constant.language.boolean.false.arc
+#                             ^^^^^^^^ source.arc comment.line.arc
+>hello "there true #@friend!" true # a comment
+#^^^^^ source.arc string.unquoted.arc
+#     ^ source.arc
+#      ^ source.arc string.quoted.double.arc string.quoted.double.arc
+#       ^^^^^^^^^^^^^^^^^^^^ source.arc string.quoted.double.arc
+#                           ^ source.arc string.quoted.double.arc string.quoted.double.arc
+#                            ^ source.arc
+#                             ^^^^ source.arc constant.language.boolean.true.arc
+#                                 ^ source.arc
+#                                  ^^^^^^^^^^^ source.arc comment.line.arc
+>hello "there false #@friend!" false#comment
+#^^^^^ source.arc string.unquoted.arc
+#     ^ source.arc
+#      ^ source.arc string.quoted.double.arc string.quoted.double.arc
+#       ^^^^^^^^^^^^^^^^^^^^^ source.arc string.quoted.double.arc
+#                            ^ source.arc string.quoted.double.arc string.quoted.double.arc
+#                             ^ source.arc
+#                              ^^^^^ source.arc constant.language.boolean.false.arc
+#                                   ^^^^^^^^ source.arc comment.line.arc
+>hello 'there #@friend!' true # a comment
+#^^^^^ source.arc string.unquoted.arc
+#     ^ source.arc
+#      ^ source.arc string.quoted.single.arc string.quoted.single.arc
+#       ^^^^^^^^^^^^^^^ source.arc string.quoted.single.arc
+#                      ^ source.arc string.quoted.single.arc string.quoted.single.arc
+#                       ^ source.arc
+#                        ^^^^ source.arc constant.language.boolean.true.arc
+#                            ^ source.arc
+#                             ^^^^^^^^^^^ source.arc comment.line.arc
+>hello 'there #@friend!' false#comment
+#^^^^^ source.arc string.unquoted.arc
+#     ^ source.arc
+#      ^ source.arc string.quoted.single.arc string.quoted.single.arc
+#       ^^^^^^^^^^^^^^^ source.arc string.quoted.single.arc
+#                      ^ source.arc string.quoted.single.arc string.quoted.single.arc
+#                       ^ source.arc
+#                        ^^^^^ source.arc constant.language.boolean.false.arc
+#                             ^^^^^^^^ source.arc comment.line.arc
+>hello `there #@friend!` true # a comment
+#^^^^^ source.arc string.unquoted.arc
+#     ^ source.arc
+#      ^ source.arc string.quoted.backtick.arc string.quoted.backtick.arc
+#       ^^^^^^^^^^^^^^^ source.arc string.quoted.backtick.arc
+#                      ^ source.arc string.quoted.backtick.arc string.quoted.backtick.arc
+#                       ^ source.arc
+#                        ^^^^ source.arc constant.language.boolean.true.arc
+#                            ^ source.arc
+#                             ^^^^^^^^^^^ source.arc comment.line.arc
+>hello `there #@friend!` false#comment
+#^^^^^ source.arc string.unquoted.arc
+#     ^ source.arc
+#      ^ source.arc string.quoted.backtick.arc string.quoted.backtick.arc
+#       ^^^^^^^^^^^^^^^ source.arc string.quoted.backtick.arc
+#                      ^ source.arc string.quoted.backtick.arc string.quoted.backtick.arc
+#                       ^ source.arc
+#                        ^^^^^ source.arc constant.language.boolean.false.arc
+#                             ^^^^^^^^ source.arc comment.line.arc
+>hello friend.hi
+#^^^^^ source.arc string.unquoted.arc
+#     ^ source.arc
+#      ^^^^^^^^^ source.arc string.unquoted.arc
+>hello 12345 # a comment
+#^^^^^ source.arc string.unquoted.arc
+#     ^ source.arc
+#      ^^^^^ source.arc constant.numeric.decimal.arc
+#           ^ source.arc
+#            ^^^^^^^^^^^ source.arc comment.line.arc
+>hello 12345# a comment
+#^^^^^ source.arc string.unquoted.arc
+#     ^ source.arc
+#      ^^^^^ source.arc constant.numeric.decimal.arc
+#           ^^^^^^^^^^^ source.arc comment.line.arc
+>hello number 123.45 friend # a comment
+#^^^^^ source.arc string.unquoted.arc
+#     ^ source.arc
+#      ^^^^^^ source.arc string.unquoted.arc
+#            ^ source.arc
+#             ^^^^^^ source.arc constant.numeric.decimal.arc
+#                   ^ source.arc
+#                    ^^^^^^ source.arc string.unquoted.arc
+#                          ^ source.arc
+#                           ^^^^^^^^^^^ source.arc comment.line.arc
+>hello number 123.45 friend# a comment
+#^^^^^ source.arc string.unquoted.arc
+#     ^ source.arc
+#      ^^^^^^ source.arc string.unquoted.arc
+#            ^ source.arc
+#             ^^^^^^ source.arc constant.numeric.decimal.arc
+#                   ^ source.arc
+#                    ^^^^^^ source.arc string.unquoted.arc
+#                          ^^^^^^^^^^^ source.arc comment.line.arc
+>true hello
+#^^^^ source.arc constant.language.boolean.true.arc
+#    ^ source.arc
+#     ^^^^^ source.arc string.unquoted.arc
+>false hello
+#^^^^^ source.arc constant.language.boolean.false.arc
+#     ^ source.arc
+#      ^^^^^ source.arc string.unquoted.arc
+>12345 hello
+#^^^^^ source.arc constant.numeric.decimal.arc
+#     ^ source.arc
+#      ^^^^^ source.arc string.unquoted.arc
+>
+>@vectors
+#^^^^^^^^ source.arc entity.name.function.arc
+>hello # a comment
+#^^^^^ source.arc string.unquoted.arc
+#     ^ source.arc
+#      ^^^^^^^^^^^ source.arc comment.line.arc
+>  there # a comment
+#^^ source.arc
+#  ^^^^^ source.arc string.unquoted.arc
+#       ^ source.arc
+#        ^^^^^^^^^^^ source.arc comment.line.arc
+>  there# a comment
+#^^ source.arc
+#  ^^^^^ source.arc string.unquoted.arc
+#       ^^^^^^^^^^^ source.arc comment.line.arc
+>  "friend#@!" # a comment
+#^^ source.arc
+#  ^ source.arc string.quoted.double.arc string.quoted.double.arc
+#   ^^^^^^^^^ source.arc string.quoted.double.arc
+#            ^ source.arc string.quoted.double.arc string.quoted.double.arc
+#             ^ source.arc
+#              ^^^^^^^^^^^ source.arc comment.line.arc
+>  'friend#@!' # a comment
+#^^ source.arc
+#  ^ source.arc string.quoted.single.arc string.quoted.single.arc
+#   ^^^^^^^^^ source.arc string.quoted.single.arc
+#            ^ source.arc string.quoted.single.arc string.quoted.single.arc
+#             ^ source.arc
+#              ^^^^^^^^^^^ source.arc comment.line.arc
+>  `friend#@!` # a comment
+#^^ source.arc
+#  ^ source.arc string.quoted.backtick.arc string.quoted.backtick.arc
+#   ^^^^^^^^^ source.arc string.quoted.backtick.arc
+#            ^ source.arc string.quoted.backtick.arc string.quoted.backtick.arc
+#             ^ source.arc
+#              ^^^^^^^^^^^ source.arc comment.line.arc
+>  true # a comment
+#^^ source.arc
+#  ^^^^ source.arc constant.language.boolean.true.arc
+#      ^ source.arc
+#       ^^^^^^^^^^^ source.arc comment.line.arc
+>  123 # a comment
+#^^ source.arc
+#  ^^^ source.arc constant.numeric.decimal.arc
+#     ^ source.arc
+#      ^^^^^^^^^^^ source.arc comment.line.arc
+>  123.45# a comment
+#^^ source.arc
+#  ^^^^^^ source.arc constant.numeric.decimal.arc
+#        ^^^^^^^^^^^ source.arc comment.line.arc
+>hi
+#^^ source.arc string.unquoted.arc
+>  there
+#^^ source.arc
+#  ^^^^^ source.arc string.unquoted.arc
+>  friends
+#^^ source.arc
+#  ^^^^^^^ source.arc string.unquoted.arc
+>
+>@maps
+#^^^^^ source.arc entity.name.function.arc
+>hello # a comment
+#^^^^^ source.arc string.unquoted.arc
+#     ^ source.arc
+#      ^^^^^^^^^^^ source.arc comment.line.arc
+>  # a comment
+#^^ source.arc
+#  ^^^^^^^^^^^ source.arc comment.line.arc
+>  there  true friends # a comment
+#^^^^^^^ source.arc variable.other.arc
+#       ^^ source.arc
+#         ^^^^ source.arc constant.language.boolean.true.arc
+#             ^ source.arc
+#              ^^^^^^^ source.arc string.unquoted.arc
+#                     ^ source.arc
+#                      ^^^^^^^^^^^ source.arc comment.line.arc
+>  there  true friends# a comment
+#^^^^^^^ source.arc variable.other.arc
+#       ^^ source.arc
+#         ^^^^ source.arc constant.language.boolean.true.arc
+#             ^ source.arc
+#              ^^^^^^^ source.arc string.unquoted.arc
+#                     ^^^^^^^^^^^ source.arc comment.line.arc
+>  true and # ok
+#^^^^^^ source.arc variable.other.arc
+#      ^ source.arc
+#       ^^^ source.arc string.unquoted.arc
+#          ^ source.arc
+#           ^^^^ source.arc comment.line.arc
+>  neighbors and# ok
+#^^^^^^^^^^^ source.arc variable.other.arc
+#           ^ source.arc
+#            ^^^ source.arc string.unquoted.arc
+#               ^^^^ source.arc comment.line.arc
+>  wonderful "humans"@#" # a comment
+#^^^^^^^^^^^ source.arc variable.other.arc
+#           ^ source.arc
+#            ^ source.arc string.quoted.double.arc string.quoted.double.arc
+#             ^^^^^^ source.arc string.quoted.double.arc
+#                   ^ source.arc string.quoted.double.arc invalid.illegal.arc
+#                    ^^ source.arc string.quoted.double.arc
+#                      ^ source.arc string.quoted.double.arc string.quoted.double.arc
+#                       ^ source.arc
+#                        ^^^^^^^^^^^ source.arc comment.line.arc
+>  wonderful "humans\"@#"# a comment
+#^^^^^^^^^^^ source.arc variable.other.arc
+#           ^ source.arc
+#            ^ source.arc string.quoted.double.arc string.quoted.double.arc
+#             ^^^^^^ source.arc string.quoted.double.arc
+#                   ^^ source.arc string.quoted.double.arc string.quoted.double.arc
+#                     ^^ source.arc string.quoted.double.arc
+#                       ^ source.arc string.quoted.double.arc string.quoted.double.arc
+#                        ^^^^^^^^^^^ source.arc comment.line.arc
+>
+>hi
+#^^ source.arc string.unquoted.arc
+>  there true 1 friend
+#^^^^^^^ source.arc variable.other.arc
+#       ^ source.arc
+#        ^^^^ source.arc constant.language.boolean.true.arc
+#            ^ source.arc
+#             ^ source.arc constant.numeric.decimal.arc
+#              ^ source.arc
+#               ^^^^^^ source.arc string.unquoted.arc
+>  neighbors and
+#^^^^^^^^^^^ source.arc variable.other.arc
+#           ^ source.arc
+#            ^^^ source.arc string.unquoted.arc
+>  wonderful "humans"@#" 123.45
+#^^^^^^^^^^^ source.arc variable.other.arc
+#           ^ source.arc
+#            ^ source.arc string.quoted.double.arc string.quoted.double.arc
+#             ^^^^^^ source.arc string.quoted.double.arc
+#                   ^ source.arc string.quoted.double.arc invalid.illegal.arc
+#                    ^^ source.arc string.quoted.double.arc
+#                      ^ source.arc string.quoted.double.arc string.quoted.double.arc
+#                       ^ source.arc
+#                        ^^^^^^ source.arc constant.numeric.decimal.arc
+>  wonderful "humans\"@#" 123.45
+#^^^^^^^^^^^ source.arc variable.other.arc
+#           ^ source.arc
+#            ^ source.arc string.quoted.double.arc string.quoted.double.arc
+#             ^^^^^^ source.arc string.quoted.double.arc
+#                   ^^ source.arc string.quoted.double.arc string.quoted.double.arc
+#                     ^^ source.arc string.quoted.double.arc
+#                       ^ source.arc string.quoted.double.arc string.quoted.double.arc
+#                        ^ source.arc
+#                         ^^^^^^ source.arc constant.numeric.decimal.arc
+>
