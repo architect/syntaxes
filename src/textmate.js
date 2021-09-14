@@ -54,7 +54,7 @@ let syntax = {
         // Must then be followed by >0 chars; capture until finding a # or space char
         // - Hitting a # makes this a vector value, so don't match and fall through
         // - Hitting a space makes this a map property, keep on checking
-        group(negSet(`#`), oneOrMore),
+        group(negSet(`#`, lit`s`), oneOrMore),
         // Map props cannot be followed by a comment (or they'd be vector items)
         negLookahead(anyWhitespace, zeroOrMore, '#'),
         // Ok, so now we've found a whole word; so look for some spaces preceding real chars

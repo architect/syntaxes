@@ -14,12 +14,17 @@
   "homepage": "https://arc.codes",
   "scripts": {
     "build": "node src/build-syntaxes",
-    "lint": "eslint . --fix"
+    "lint": "eslint . --fix",
+    "test:update-snapshot": "npx vscode-tmgrammar-snap -u -s source.arc -g ./arc-textmate.json -t test/*.arc",
+    "test:json:snapshot": "npx vscode-tmgrammar-snap -s source.arc -g ./arc-textmate.json -t test/*.arc",
+    "test:plist:snapshot": "npx vscode-tmgrammar-snap -s source.arc -g ./arc.tmLanguage -t test/*.arc",
+    "test": "npm run lint && npm run build && npm run test:json:snapshot && npm run test:plist:snapshot"
   },
   "devDependencies": {
     "@architect/eslint-config": "^2.0.0",
     "eslint": "^7.32.0",
-    "plist": "^3.0.4"
+    "plist": "^3.0.4",
+    "vscode-tmgrammar-test": "0.0.11"
   },
   "eslintConfig": {
     "extends": "@architect/eslint-config"
