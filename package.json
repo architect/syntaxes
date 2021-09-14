@@ -1,6 +1,6 @@
 {
   "name": "@architect/syntaxes",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "description": "Syntax definitions for highlighter extensions and other tools that display the Architect file format",
   "author": "Ryan Block <hello@ryanblock.com>",
   "license": "Apache-2.0",
