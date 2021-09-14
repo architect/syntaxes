@@ -1,8 +1,8 @@
 /* eslint-disable indent */
 let {
   anyNonWhitespace, anyWhitespace, ascii, captureGroupStart, concat, end, greedy,
-  group, lit, negLookahead, oneOrMore, optional, or, posLookahead, posLookbehind,
-  set, space, start, tab, zeroOrMore
+  group, lit, negLookahead, negSet, oneOrMore, optional, or, posLookahead,
+  posLookbehind, set, space, start, tab, zeroOrMore
 } = require('./_regex')
 
 // These two allow us to capture clean tokens as we work through lines of potentially many words
@@ -54,7 +54,7 @@ let syntax = {
         // Must then be followed by >0 chars; capture until finding a # or space char
         // - Hitting a # makes this a vector value, so don't match and fall through
         // - Hitting a space makes this a map property, keep on checking
-        group(set(`^#${lit`s`}`), oneOrMore),
+        group(negSet(`#`), oneOrMore),
         // Map props cannot be followed by a comment (or they'd be vector items)
         negLookahead(anyWhitespace, zeroOrMore, '#'),
         // Ok, so now we've found a whole word; so look for some spaces preceding real chars
