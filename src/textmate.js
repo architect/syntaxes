@@ -1,21 +1,18 @@
 /* eslint-disable indent */
 let {
-  anyNonWhitespace, anyWhitespace, ascii, captureGroupStart, concat, end, greedy,
+  alphaLow, alphaUp, anyNonWhitespace, anyWhitespace, ascii, captureGroupStart, concat, end, greedy,
   group, lit, negLookahead, negSet, oneOrMore, optional, or, posLookahead,
-  posLookbehind, set, space, start, tab, zeroOrMore
+  posLookbehind, set, space, start, tab, zeroOrMore, zeroToNine
 } = require('./_regex')
 
 // These two allow us to capture clean tokens as we work through lines of potentially many words
 let precedingSpaceStartOrCapture = posLookbehind(anyWhitespace, or, start, or, captureGroupStart)
 let proceedingSpaceCommentOrEnd = posLookahead(anyWhitespace, or, '#', or, end)
 
-// Standard ascii charset sans quotes
-let asciiWithoutQuotes = ascii.filter(c => ![ '"', `'`, '`' ].includes(c))
-
 let syntax = {
   name: 'Architect',
   scopeName: 'source.arc',
-  firstLineMatch: concat(start, '@', set(...asciiWithoutQuotes), oneOrMore),
+  firstLineMatch: concat(start, '@', set(alphaLow, alphaUp, zeroToNine, '-', '_'), oneOrMore),
   patterns: [
     { include: '#comments' },
 
@@ -29,7 +26,7 @@ let syntax = {
     {
       comment: 'pragmas',
       name: 'entity.name.function.arc',
-      match: concat(start, '@', set(...asciiWithoutQuotes), oneOrMore),
+      match: concat(start, '@', set(alphaLow, alphaUp, zeroToNine, '-', '_'), oneOrMore),
     },
 
     /**
