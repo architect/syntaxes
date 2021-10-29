@@ -7,7 +7,7 @@
     <key>scopeName</key>
     <string>source.arc</string>
     <key>firstLineMatch</key>
-    <string>^@[a-zA-Z0-9!$%^&amp;*(){}\[\]&lt;&gt;\-_\+=\|\\:;,\.\?/~]+</string>
+    <string>^@[a-zA-Z0-9-_]+</string>
     <key>patterns</key>
     <array>
       <dict>
@@ -32,7 +32,7 @@
         <key>name</key>
         <string>entity.name.function.arc</string>
         <key>match</key>
-        <string>^@[a-zA-Z0-9!$%^&amp;*(){}\[\]&lt;&gt;\-_\+=\|\\:;,\.\?/~]+</string>
+        <string>^@[a-zA-Z0-9-_]+</string>
       </dict>
       <dict>
         <key>comment</key>
