@@ -2,6 +2,19 @@
 
 ---
 
+## [1.1.0] 2021-10-28
+
+### Added
+
+- Added JSON schema
+
+
+### Changed
+
+- Un-relax pragma validation (which, for Architect projects, should be `^@[a-zA-Z0-9-_]+`)
+
+---
+
 ## [1.0.1] 2021-09-12
 
 ### Added
