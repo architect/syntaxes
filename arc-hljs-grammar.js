@@ -27,13 +27,9 @@ let backtickQuotedStrings = {
   end: '(`)',
   contains: [ { begin: '\\\\`' } ]
 }
-let pragmas = {
-  scope: 'title.function',
-  begin: '^@[a-zA-Z0-9-_]+',
-  end: '(?=\\s|#|$)'
-}
+let pragmas = { scope: 'title', begin: '^@[a-zA-Z0-9-_]+', end: '(?=\\s|#|$)' }
 let mapVectorName = {
-  scope: 'keyword',
+  scope: 'variable',
   begin: '(?<=^)(\\S+)(?=\\s|#|$)(?=#?[^\\r\\n]*[\\r\\n](^[\\t ]{2}\\S))',
   end: '\\s'
 }
