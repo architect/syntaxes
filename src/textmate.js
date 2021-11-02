@@ -1,4 +1,5 @@
 /* eslint-disable indent */
+// REMINDER: when editing and improving this syntax definition, don't forget to update the others in ./src!
 let {
   alphaLow, alphaUp, anyNonWhitespace, anyWhitespace, ascii, captureGroupStart, concat, end, greedy,
   group, lit, negLookahead, negSet, oneOrMore, optional, or, posLookahead,
@@ -42,10 +43,7 @@ let syntax = {
       comment: 'map properties & implied vector values; map / vector names cannot be detected',
       begin: concat(
         // Anchor on new lines starting with two spaces / tabs
-        group(
-          start,
-          set(tab, space), '{2}'
-        ),
+        group(start, set(tab, space), '{2}'),
         // But it cannot start with comment
         negLookahead('#'),
         // Must then be followed by >0 chars; capture until finding a # or space char
@@ -74,11 +72,7 @@ let syntax = {
       patterns: [
         {
           name: 'comment.line.arc',
-          match: concat(
-            '#',
-            greedy,
-            end,
-          )
+          match: concat('#', greedy, end)
         }
       ]
     },
@@ -129,10 +123,7 @@ let syntax = {
               name: 'string.quoted.double.arc'
             }
           },
-          end: concat(
-            group('"'),
-            proceedingSpaceCommentOrEnd,
-          ),
+          end: concat(group('"'), proceedingSpaceCommentOrEnd),
           endCaptures: {
             '0': {
               name: 'string.quoted.double.arc'
@@ -160,10 +151,7 @@ let syntax = {
               name: 'string.quoted.single.arc'
             }
           },
-          end: concat(
-            group("'"),
-            proceedingSpaceCommentOrEnd,
-          ),
+          end: concat(group("'"), proceedingSpaceCommentOrEnd),
           endCaptures: {
             '0': {
               name: 'string.quoted.single.arc'
@@ -191,10 +179,7 @@ let syntax = {
               name: 'string.quoted.backtick.arc'
             }
           },
-          end: concat(
-            group('`'),
-            proceedingSpaceCommentOrEnd,
-          ),
+          end: concat(group('`'), proceedingSpaceCommentOrEnd),
           endCaptures: {
             '0': {
               name: 'string.quoted.backtick.arc'
@@ -217,9 +202,7 @@ let syntax = {
           name: 'string.unquoted.arc',
           match: concat(
             precedingSpaceStartOrCapture,
-            group(
-              set(...ascii), oneOrMore
-            ),
+            group(set(...ascii), oneOrMore),
             proceedingSpaceCommentOrEnd
           )
         },
