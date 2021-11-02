@@ -9,10 +9,11 @@
 npm i && npm run build
 ```
 
-This generates and writes versions to be consumed by Atom, Sublime Text, and VS Code:
+This generates and writes versions to be consumed by Atom, Sublime Text, VS Code, and Highlight.js:
 
 - [JSON format](arc-textmate.json) - Used by Atom + VS Code
 - [PLIST format](arc.tmLanguage) - Used by Sublime Text
+- [Highlight.js](arc-hljs-grammar.jsarc.tmLanguage) - CJS module used by Highlight.js
 
 Should any additional variations need to be built, create them here and pull them in as dependencies of the text editor extension in question.
 
@@ -39,3 +40,4 @@ Should any additional variations need to be built, create them here and pull the
 - [Atom: TextMate grammar examples](https://github.com/atom?q=language-)
 - [Oniguruma regex syntax spec](https://macromates.com/manual/en/regular_expressions)
 - [Atom: Creating a Legacy TextMate Grammar](https://flight-manual.atom.io/hacking-atom/sections/creating-a-legacy-textmate-grammar/)
+- [Highlight.js language definition guide](https://highlightjs.readthedocs.io/en/latest/language-guide.html)

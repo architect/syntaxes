@@ -33,6 +33,7 @@ let re = {
   space: ' ',
   tab: l`t`,
   anyWhitespace: l`s`,
+  newline: '\\r\\n',
 
   // Bool
   or: '|',
