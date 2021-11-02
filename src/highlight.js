@@ -65,14 +65,14 @@ let string = {
 
 // Pragmas
 let pragmas = {
-  scope: 'title.function',
+  scope: 'title',
   begin: concat(start, '@', set(alphaLow, alphaUp, zeroToNine, '-', '_'), oneOrMore),
   end: proceedingSpaceCommentOrEnd
 }
 
 // Map + Vector names
 let mapVectorName = {
-  scope: 'keyword',
+  scope: 'variable',
   begin: concat(
     posLookbehind(start),
     group(anyNonWhitespace, oneOrMore),
