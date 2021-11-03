@@ -1,4 +1,4 @@
-<p align=center><img src="https://s3-us-west-2.amazonaws.com/arc.codes/architect-logo-500b@2x.png" width=500></p>
+<p align=center><img src="https://assets.arc.codes/architect-logo-500b@2x.png" width=500></p>
 
 > Syntax definitions for highlighter extensions and other tools that display the Architect file format
 
